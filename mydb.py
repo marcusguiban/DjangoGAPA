@@ -10,17 +10,17 @@ print("Connected to MongoDB!")
 
 # You can create collections and documents as needed within the "payroll" database.
 # For example, to create a collection named "employees":
-employees_collection = database["employees"]
+employees_collection = database["PayrollCollection"]
 
 # Now you can insert documents into the "employees" collection, for example:
-employee_data = {
-    "name": "John Doe",
-    "position": "Software Engineer",
-    "salary": 60000
-}
+# employee_data = {
+#     "name": "John Doe",
+#     "position": "Software Engineer",
+#     "salary": 60000
+# }
 
 # Insert the document into the collection
-employees_collection.insert_one(employee_data)
+# employees_collection.insert_one(employee_data)
 
 print("Document inserted successfully!")
 
