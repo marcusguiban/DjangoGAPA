@@ -52,28 +52,7 @@ MIDDLEWARE = [
 ]
 
 
-# DATABASES = {
-#         'default': {
-#             'ENGINE': 'djongo',
-#             'NAME': 'GAPAdatabase',
-#             'ENFORCE_SCHEMA': False,
-#             'CLIENT': {
-#                 'host': 'mongodb+srv://admin:May182002@kodegocluster.3dfjebo.mongodb.net/?retryWrites=true&w=majority&appName=KodegoCluster'
-#             }  
-#         }
-# }
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'CLIENT': {
-            'host': 'localhost', # Replace with your MongoDB server address
-            'port': 27017,               # Replace with your MongoDB port if different
-        },
-        'NAME': 'PayrollDatabase',
-    }
-}
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -96,10 +75,44 @@ WSGI_APPLICATION = 'GAPA.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'djongo',
+#             'NAME': 'GAPAdatabase',
+#             'ENFORCE_SCHEMA': False,
+#             'CLIENT': {
+#                 'host': 'mongodb+srv://admin:May182002@kodegocluster.3dfjebo.mongodb.net/?retryWrites=true&w=majority&appName=KodegoCluster'
+#             }  
+#         }
+# }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'Djongo',
+#         'CLIENT': {
+#             'host': 'localhost', # Replace with your MongoDB server address
+#             'port': 27017,               # Replace with your MongoDB port if different
+#         },
+#         'NAME': 'PayrollDatabase',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'GAPA',
+        'USER': 'root',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
